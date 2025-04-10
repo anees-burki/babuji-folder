@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babuji</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff9e6;
+            padding: 20px;
+        }
+
+        .header-box {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 8px;
+        }
+
+        .header {
+            background-color: #21282D;
+            color: white;
+            padding: 16px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .inside-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+        }
+
+        .header-links {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hero-bg {
+            background-image: url(Images/illustration-construction-site.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            border-radius: 20px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            color: white;
+        }
+
+        .hero-motto {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #D3944C;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .gallery-section {
+            background-color: #21282D;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .gallery-heading {
+            color: #D3944C;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: minmax(200px, auto);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                width: 90%;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+            }
+
+            .hero-motto {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 20px;
+            }
+
+            .gallery-heading {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-box">
+        <header class="header">
+            <div class="inside-header">
+                <div class="left-header">
+                    <a href="" class="header-links">Hello</a>
+                </div>
+                <div class="right-header">
+                    <a href="#gallery" class="header-links">World</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="hero-bg">
+        <div class="hero-content">
+            <h2 class="hero-motto">"Building Dreams, Crafting Realities"</h2>
+            <p class="hero-text">20+ years of excellence in construction, where quality meets innovation and precision
+                shapes the future.</p>
+        </div>
+    </div>
+
+    <div class="gallery-section" id="gallery">
+        <h1 class="gallery-heading">Projects</h1>
+        <div class="gallery-container">
+            <div class="gallery-item wide">
+                <img src="Images/mazaar.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item tall">
+                <img src="/Images/mazaar.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="/Images/mazaar.jpg" alt="Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="/Images/illustration-construction-site.jpg" alt="Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="/Images/background-image.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/240/400/400" alt="Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="/Images/mazaar.jpg" alt="Image 6">
+            </div>
+            <div class="gallery-item wide tall">
+                <img src="fbr-kaar.jpeg" alt="Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/242/400/400" alt="Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/242/400/400" alt="Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/242/400/400" alt="Image 6">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
